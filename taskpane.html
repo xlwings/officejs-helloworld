@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Taskpane</title>
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+</head>
+
+<body>
+    <!-- Put a button on the task pane -->
+    <p>Hit the Run button to paint the selected cells yellow and write the address to cell A1!</p>
+    <button id="run" type="button">Run</button>
+    <script>
+        // Initialize Office.js
+        Office.onReady(function (info) { });
+
+        // Add a click event listener to the button
+        document.getElementById("run").addEventListener("click", run);
+
+        // Based on 'Basic API call' sample from ScriptLab
+        async function run() {
+            await Excel.run(async (context) => {
+                const range = context.workbook.getSelectedRange();
+                range.format.fill.color = "yellow";
+                range.load("address");
+
+                await context.sync();
+
+                const sheets = context.workbook.worksheets;
+                sheets.getItem("Sheet1").getRange("A1").values = [["The selected address was " + range.address + "."]];
+            });
+        }
+
+    </script>
+</body>
+
+</html>
