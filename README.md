@@ -9,4 +9,6 @@ The HTML file is being served by [GitHub pages](https://docs.github.com/en/pages
 
 You can play around with the add-in by sideloading the `manifest.xml` according to the [office.js docs](https://learn.microsoft.com/en-us/office/dev/add-ins/testing/test-debug-office-add-ins#sideload-an-office-add-in-for-testing).
 
+Note that this sample uses the raw Excel JavaScript API (no Python/xlwings).
+
 ![Screenshot](/screenshot.png?raw=true)
