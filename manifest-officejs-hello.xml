@@ -79,7 +79,7 @@
         <bt:Url id="Taskpane.Url" DefaultValue="https://xlwings.github.io/officejs-helloworld/taskpane.html" />
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="MyTab.TabLabel" DefaultValue="Hello Office.js" />
+        <bt:String id="MyTab.TabLabel" DefaultValue="Hello World" />
         <bt:String id="MyCommandsGroup.Label" DefaultValue="MyGroup" />
         <bt:String id="MyTaskpaneButton.Label" DefaultValue="Show Taskpane" />
       </bt:ShortStrings>
