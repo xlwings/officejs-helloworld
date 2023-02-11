@@ -11,13 +11,13 @@
 <body>
     <!-- Put a button on the task pane -->
     <p>Hit the Run button to paint the selected cells yellow and write the address to cell A1!</p>
-    <button id="run" type="button">Run</button>
+    <button id="run-btn" type="button">Run</button>
     <script>
         // Initialize Office.js
         Office.onReady(function (info) { });
 
         // Add a click event listener to the button
-        document.getElementById("run").addEventListener("click", run);
+        document.getElementById("run-btn").addEventListener("click", run);
 
         // Based on 'Basic API call' sample from ScriptLab
         async function run() {
